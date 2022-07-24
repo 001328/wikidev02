@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Building a website with Jekyll and GitHub pages"
-date:   2022-07-24 01:00:00 -0400
+date:   2022-07-23 01:00:00 -0400
 categories: jekyll update
 ---
 
