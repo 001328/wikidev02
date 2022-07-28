@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A custom name for your GitHub pages website"
-date:   2022-07-23 01:05:00 -0400
+date:   2022-07-24 01:05:00 -0400
 categories: jekyll update
 ---
 
@@ -84,7 +84,7 @@ The final result:
 
 # The End
 
-> This Tutorial follows the offical [Github Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
+> This Tutorial follows the offical [Github Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site) with a littlle help from [this guy](https://hossainkhan.medium.com/using-custom-domain-for-github-pages-86b303d3918a)
 
 
 > By the way - DNS means **Domain Name Service**

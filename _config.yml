@@ -19,17 +19,20 @@
 # in the templates via {{ site.myvariable }}.
 
 title: My Azure Data Platform
-email: hendrik.kampert@gmail.com
+author: Hendrik Kampert
 description: Enterprise-level data Democracy!
-# baseurl: "/wikidev02" # the subpath of your site, e.g. /blog
-# url: "https://001328/github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""
-url: "dev.azuredataplatform.net"
+
+# this is the very old stuff - baseurl: "/wikidev02" # the subpath of your site, e.g. /blog
+# this is the very old stuff - url: "https://001328/github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # baseurl: ""
-# url: ""
-# twitter_username: jekyllrb
-github_username:  001328
+# url: "dev.azuredataplatform.net"
+baseurl: ""
+url: ""
+
+github_username:  01328
 linkedin_username: hendrikkampert
+rss: subscribe
+
 
 # Build settings
 #theme: minima

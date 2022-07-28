@@ -112,3 +112,14 @@ To host it for free we will change only one step.
 
 Now we can create our own domain and give it a custom name!
 
+
+## Other
+
+# minima
+
+*Minima is a one-size-fits-all Jekyll theme for writers*. It's Jekyll's default (and first) theme. It's what you get when you run `jekyll new`.
+
+[Theme preview](https://jekyll.github.io/minima/)
+
+**We will take this as the base for the section of creating-content**
+
