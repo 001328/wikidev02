@@ -2,8 +2,8 @@
 layout: post
 title:  "Adding tags for Navigation"
 date:   2022-07-29 01:10:00 -0400
-categories: boom
-tags: boom whatever mega
+categories: boom wtf
+tags: boom whatever mega wtf
 ---
 
 Sooo - let's add some tags for navigation.

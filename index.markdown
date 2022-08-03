@@ -7,4 +7,4 @@ layout: hometags
 
 DevOps is organizational change!
 
-Adoptiong it will affect every aspect of your organisation!
+Adopting it will affect every aspect of your organisation!
