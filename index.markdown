@@ -5,7 +5,6 @@
 layout: hometags
 ---
 
-I love this!
+DevOps is organizational change!
 
-DevOps is organizational Change, not just a project methodology.
-If you want to *adapt* it, you need to **adapt** it!
+Adoptiong it will affect every aspect of your organisation!
