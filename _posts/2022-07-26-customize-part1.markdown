@@ -3,6 +3,7 @@ layout: post
 title:  "Customize the template | Part 1"
 date:   2022-07-26 01:00:00 -0400
 categories: jekyll update
+tags: customize website
 ---
 
 Our initial Website is now set up. 

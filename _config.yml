@@ -29,10 +29,12 @@ description: Enterprise-level data Democracy!
 baseurl: ""
 url: ""
 
+permalink: /blog/:title/
+
+
 github_username:  01328
 linkedin_username: hendrikkampert
 rss: subscribe
-
 
 # Build settings
 #theme: minima
@@ -40,6 +42,7 @@ rss: subscribe
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-archives
 
 include:
   - _pages
@@ -66,3 +69,41 @@ relative_links:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# -----------------------------------------------------------------------------
+# Jekyll Archives
+# -----------------------------------------------------------------------------
+
+# jekyll-archives:
+#   enabled: [tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+#   layouts:
+#     tag: archive-tag
+#     category: archive-category
+#   permalinks:
+#     tag: '/blog/tag/:name/'
+#     category: '/blog/category/:name/'
+
+# display_tags: ['jekyll', 'website', 'customize'] # this tags will be dispalyed on the front page of your blog
+
+# https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
+
+jekyll-archives:
+  enabled: 
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+
+
+
+# jekyll-archives:
+#   enabled: []
+#   layouts:
+#     tag: tag-archive
+#   permalinks:
+#     year: '/:year/'
+#     month: '/:year/:month/'
+#     day: '/:year/:month/:day/'
+#     tag: '/tag/:name/'
+#     category: '/category/:name/'
