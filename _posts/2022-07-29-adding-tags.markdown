@@ -8,6 +8,25 @@ tags: boom whatever mega wtf
 
 Sooo - let's add some tags for navigation.
 I have no idea how this works, but I will try..
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------
+
+# NOTHING BELOW WORKS
+
+------------------------
+
 <!-- the following is already installed, just add it to _config -->
 
 # Add gem 'jekyll-archives' to your site’s Gemfile

@@ -42,7 +42,7 @@ rss: subscribe
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-archives
+  # - jekyll-archives
 
 include:
   - _pages
@@ -50,8 +50,13 @@ include:
 relative_links:
   collections: true
 
-custom_pages: 
-  - /about/
+
+
+# Archives
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
 
 
 # Exclude from processing.
@@ -74,6 +79,23 @@ custom_pages:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # -----------------------------------------------------------------------------
 # Jekyll Archives
 # -----------------------------------------------------------------------------
@@ -91,12 +113,12 @@ custom_pages:
 
 # https://github.com/jekyll/jekyll-archives/blob/master/docs/configuration.md
 
-jekyll-archives:
-  enabled: 
-    - categories
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
+# jekyll-archives:
+#   enabled: 
+#     - categories
+#   layout: archive
+#   permalinks:
+#     category: '/category/:name/'
 
 
 

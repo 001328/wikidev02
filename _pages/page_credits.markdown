@@ -26,7 +26,7 @@ Please don't be mad if I forgot someone:
 - **Volker Neugebauer**: For helping me setting up my first projects and introducing me to the right people.
 
 - **Tim Cuzmar**: For sharing your experience in project management
-- **Anbdreas Bohnen**:
+- **Andreas Bohnen**:
 - **Michael Dirk Wegenaer-Schuchardt**
 
 - **Volker Topp**: For your blind trust and leadership that let me take the next step towards becoming a solution architect
