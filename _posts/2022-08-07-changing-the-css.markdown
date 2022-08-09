@@ -3,7 +3,7 @@ layout: post
 title:  "Changing the CSS"
 date:   2022-08-06 01:10:00 -0400
 categories: training
-tags: css
+tags: css css1 css2 css3 css4 css5 css6 css7 css8 css9 css10
 ---
 
 
