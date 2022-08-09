@@ -2,23 +2,22 @@
  * custom stuff
  */
 
- .hiddencat { display: none; }
-
+//  .hiddencat { display: none; }
  
  .hidden { display: none; }
 
  .post-tag {
-  color: #31973d;
-  background-color: #e0c8df;
+  color: $brand-color;
+  background-color: $brand-color;
   display: inline-block;
-  background: #e6d5e4;
+  background: $secondary-color;
   padding: 0 .5rem;
   margin-right: .5rem;
   border-radius: 4px;
   &:hover {
     text-decoration: none;
-    background: #e0c8df;
-    color: #ffffff;
+    background: $brand-color;
+    color: $secondary-color;
   }
 }
 
@@ -29,8 +28,10 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  border-top: 5px solid $brand-color;
+  border-bottom: 1px solid $secondary-color;
+  // border-top: 5px solid $grey-color-dark;
+  // border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
 
   // Positioning context for the mobile navigation icon
@@ -47,7 +48,8 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    // color: $grey-color-dark;
+    color: $brand-color;
   }
 }
 
@@ -64,7 +66,8 @@
   }
 
   .page-link {
-    color: $text-color;
+    color: $brand-color;
+    // color: $text-color;
     line-height: $base-line-height;
 
     // Gaps between nav items, but not on the last one
@@ -133,13 +136,15 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $secondary-color;
+  // border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
 }
 
 .footer-heading {
   @include relative-font-size(1.125);
   margin-bottom: $spacing-unit / 2;
+  color: $brand-color;
 }
 
 .contact-list,
@@ -150,7 +155,8 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: $brand-color;
+  // color: $grey-color;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 }
@@ -209,6 +215,7 @@
 
 .page-heading {
   @include relative-font-size(2);
+  color: $brand-color;
 }
 
 .post-list-heading {
@@ -226,7 +233,9 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  // color: lighten($brand-color, 30%);
+  color: darken($secondary-color, 10%);
+  // color: $grey-color;
 }
 
 .post-link {

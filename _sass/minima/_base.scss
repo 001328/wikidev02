@@ -103,18 +103,18 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: green;
-  // color: $brand-color;
+  // color: green;
+  color: $brand-color;
   text-decoration: none;
 
   &:visited {
-    color: darken(yellow, 15%);
-    // color: darken($brand-color, 15%);
+    // color: darken(yellow, 15%);
+    color: $brand-color;
   }
 
   &:hover {
-    color: pink;
-    // color: $text-color;
+    // color: $secondary-color;
+    color: lighten($brand-color, 20%);
     text-decoration: underline;
   }
 
@@ -215,7 +215,8 @@ pre {
     width: 16px;
     height: 16px;
     display: inline-block;
-    fill: #{$grey-color};
+    // fill: #{$grey-color};
+    fill: #{$brand-color};
     padding-right: 5px;
     vertical-align: text-top;
 }
