@@ -2,8 +2,8 @@
 layout: post
 title:  "Building a website with Jekyll and GitHub pages"
 date:   2022-07-23 01:00:00 -0400
-categories: jekyll update
-tags: jekyll website 101
+categories: tutorial
+tags: jekyll github-pages
 ---
 
 This post explains how to build a simple website and host it for free.

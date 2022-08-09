@@ -2,7 +2,8 @@
 layout: post
 title:  "A custom name for your GitHub pages website"
 date:   2022-07-24 01:05:00 -0400
-categories: jekyll update
+categories: website
+tags: jekyll github-pages
 ---
 
 Now we want to give our new website a cool looking name.

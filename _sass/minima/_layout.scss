@@ -1,4 +1,31 @@
 /**
+ * custom stuff
+ */
+
+ .hiddencat { display: none; }
+
+ 
+ .hidden { display: none; }
+
+ .post-tag {
+  color: #31973d;
+  background-color: #e0c8df;
+  display: inline-block;
+  background: #e6d5e4;
+  padding: 0 .5rem;
+  margin-right: .5rem;
+  border-radius: 4px;
+  &:hover {
+    text-decoration: none;
+    background: #e0c8df;
+    color: #ffffff;
+  }
+}
+
+
+
+
+/**
  * Site header
  */
 .site-header {

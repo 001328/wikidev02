@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+
+{%- comment -%}
+=======================
+The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
+=======================
+{%- endcomment -%}
+{%- assign rawtags = "" -%}
+{%- for post in site.posts -%}
+	{%- assign ttags = post.tags | join:'|' | append:'|' -%}
+	{%- assign rawtags = rawtags | append:ttags -%}
+{%- endfor -%}
+{%- assign rawtags = rawtags | split:'|' | sort -%}
+
+{%- comment -%}
+=======================
+The following part removes dulpicated tags and invalid tags like blank tag.
+=======================
+{%- endcomment -%}
+{%- assign tags = "" -%}
+{%- for tag in rawtags -%}
+	{%- if tag != "" -%}
+		{%- if tags == "" -%}
+			{%- assign tags = tag | split:'|' -%}
+		{%- endif -%}
+		{%- unless tags contains tag -%}
+			{%- assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' -%}
+		{%- endunless -%}
+	{%- endif -%}
+{%- endfor -%}
+
+
+<!-- {%- comment -%}
+=======================
+Same as above but for categories
+=======================
+{%- endcomment -%}
+{%- assign rawcategories = "" -%}
+{%- for post in site.posts -%}
+	{%- assign tcategories = post.categories | join:'|' | append:'|' -%}
+	{%- assign rawcategories = rawcategories | append:tcategories -%}
+{%- endfor -%}
+{%- assign rawcategories = rawcategories | split:'|' | sort -%}
+{%- assign categories = "" -%}
+{%- for category in rawcategories -%}
+	{%- if category != "" -%}
+		{%- if categories == "" -%}
+			{%- assign categories = category | split:'|' -%}
+		{%- endif -%}
+		{%- unless categories contains category -%}
+			{%- assign categories = categories | join:'|' | append:'|' | append:category | split:'|' -%}
+		{%- endunless -%}
+	{%- endif -%}
+{%- endfor -%} -->
+
+
+<div class="home">
+  <h1 class="page-heading">Posts<span id="tagID"></span></h1>
+  
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+
+  <!-- <h1 class="post-tag" id="bullshitID">bullshit</h1>
+
+    <h2 class="post-tag" id="catID">Categories</h2>
+
+    <a class="post-tag" href="">#all</a>
+    {% for category in categories %}    
+    <a id={{category}} class="post-tag supertag" href="#{{ category | slugify }}" onclick="reply_clickcat(this.id)"> #{{ category }} </a>
+    {% endfor %}
+    <br> -->
+
+    <!-- <h2 id="tagID">Tags</h2> -->
+
+   
+    <a class="post-tag" href="">#all</a>
+    {% for tag in tags %}    
+    <a id={{tag}} class="post-tag" href="#{{ tag | slugify }}" onclick="click_the_tag(this.id)"> #{{ tag }} </a>
+    {% endfor %}
+    
+    <br>
+    <br>
+    <br>
+
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      {% assign joinedtags = post.tags | join:" #" %}
+      {% assign joinedcats = post.categories | join:" " %}
+      <li class="post-elements {{joinedtags}} {{joinedcats}}">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">| {{joinedtags | prepend: "#"}}</span>
+        <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+  {%- endif -%}
+
+</div>
+
+
+
+<script>
+
+
+  function click_the_tag(clicked_id) {
+    document.getElementById("tagID").innerHTML = " with tag #" + clicked_id;
+    const posts33 = document.getElementsByClassName("post-elements");
+    for (const post of posts33) {
+      post.classList.add("hidden");
+    };
+    const posts = document.getElementsByClassName(clicked_id);
+    for (const post of posts) {
+      post.classList.remove("hidden");
+    };
+  }
+
+
+  // function reply_clickcat(clicked_id) {
+  //   document.getElementById("catID").innerHTML = clicked_id;
+  //   const cats33 = document.getElementsByClassName("classpost");
+  //   for (const cat of cats33) {
+  //     cat.classList.add("hiddencat");
+  //   };
+  //   const cats = document.getElementsByClassName(clicked_id);
+  //   for (const cat of cats) {
+  //     cat.classList.remove("hiddencat");
+  //   };
+  // }
+
+</script>

@@ -2,8 +2,8 @@
 layout: post
 title:  "Customize the template | Part 2"
 date:   2022-07-26 01:05:00 -0400
-categories: jekyll update
-tags: customize website
+categories: tutorial
+tags: jekyll
 ---
 
 In the last post we started to customized the folder structure of our new template.

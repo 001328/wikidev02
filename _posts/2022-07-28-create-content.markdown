@@ -2,7 +2,7 @@
 layout: post
 title:  "Creating content"
 date:   2022-07-28 01:10:00 -0400
-categories: jekyll update
+tags: github-pages jekyll markdown
 ---
 
 now let's create some content in markdown
@@ -27,7 +27,7 @@ permalink: /about/
 ---
 ```
 
-If you want to adjust the **layout**, just go to _layouts, create the layout you like and you can use it at the beginning of the page.
+If you want to adjust the **layout**, just go to _layouts, create the layout (html) you like and you can use it at the beginning of the page.
 The title adjusts the Header on the page and the link.
 The **permalink** is the actual link you can use for navigation.
 
@@ -51,6 +51,7 @@ bundle exec jekyll serve --drafts
 ```
 
 Each post has a header, **layout** is *post*, **title** is whatever you want to see, the **date** sorts your posts and **categories** structures your URL and provides Filter capabilities.
+**Categories** is one of two standard features the vanilla jekyll framework minima provides. The other one is **Tags** which I personally find a little more intuitive and will use for adding navigation to my page (see next posts).
 
 ```
 ---
@@ -58,6 +59,7 @@ layout: post
 title:  "Creating content"
 date:   2022-07-28 01:10:00 -0400
 categories: jekyll update
+tags: github-pages
 ---
 ```
 

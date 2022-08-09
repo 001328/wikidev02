@@ -1,0 +1,189 @@
+---
+layout: default
+title: tag
+---
+
+{% comment %}
+=======================
+The following part extracts all the tags from your posts and sort tags, so that you do not need to manually collect your tags to a place.
+=======================
+{% endcomment %}
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign ttags = post.tags | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% comment %}
+=======================
+The following part removes dulpicated tags and invalid tags like blank tag.
+=======================
+{% endcomment %}
+{% assign tags = "" %}
+{% for tag in rawtags %}
+	{% if tag != "" %}
+		{% if tags == "" %}
+			{% assign tags = tag | split:'|' %}
+		{% endif %}
+		{% unless tags contains tag %}
+			{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+		{% endunless %}
+	{% endif %}
+{% endfor %}
+
+
+
+
+
+
+
+
+
+{% for tag in tags %}
+ <a id={{tag}} class="post-tag" href="#{{ tag | slugify }}" onclick="reply_click(this.id)"> #{{ tag }} </a>
+{% endfor %}
+
+
+
+<p id="tagID">tagID</p>
+
+{% for post in site.posts %}
+
+{% endfor %}
+
+
+
+	<ul>
+	 {% for post in site.posts %}
+	 	{% assign joinedtags = post.tags | join:" " %}
+
+	 	<li class="classpost {{joinedtags}}" ><a href="{{ post.url }}">{{ post.title }}</a></li>	 
+	 	<!-- <li><a class={{post.tags | join: ","}} href="{{ post.url }}">{{ post.title }}</a></li> -->
+		 <!-- <li hidden="true"><a href="{{ post.url }}">{{ post.title }}</a></li> -->
+ 
+	 {% endfor %}
+	</ul>
+
+
+
+
+	<script>
+
+		function reply_click(clicked_id) {
+			document.getElementById("tagID").innerHTML = clicked_id;
+			const posts33 = document.getElementsByClassName("classpost");
+			for (const post of posts33) {
+				post.classList.add("hidden");
+			};
+			const posts = document.getElementsByClassName(clicked_id);
+			for (const post of posts) {
+				post.classList.remove("hidden");
+			};
+
+
+			// function reply_click(clicked_id) {
+			// document.getElementById("tagID").innerHTML = clicked_id;
+			// // document.getElementsByClassName("classpost").style.display = 'inline';
+			// const posts33 = document.getElementsByClassName("classpost");
+			// for (const post3 of posts33) {
+			// 	post3.classList.remove("hidden");
+			// };
+			// const posts = document.getElementsByClassName(clicked_id);
+			// // for (const post of posts) {
+			// // 	post.style.display = 'none';
+			// // };
+			// for (const post of posts) {
+			// 	post.classList.add("hidden");
+			// };
+
+		// function boom_click() {
+		// 	const posts33 = document.getElementsByClassName("classpost");
+		// 	for (const post3 of posts33) {
+		// 		post3.style.display = 'inline';
+		// 	};
+		}
+
+
+			// const posts100 = document.getElementsByClassName("classpost");
+			// if (posts100.classList.contains(clicked_id)) {
+			// 	posts100.style.display = 'none';
+			// } else {
+			// 	posts100.style.display = 'inline';
+			// }
+			
+			// getElementsByClassName(clicked_id);
+			// for (const post1 of posts100) {
+			// 	post1.style.display = 'inline';
+			// }
+		
+
+		// post222.style.visibility = 'hidden';
+		// post222.style.display = 'inline';
+
+		// function reply_click(clicked_id) {
+		// 	document.getElementById("tagID").innerHTML = clicked_id;
+		// }
+
+    // box.style.display = 'none';
+
+	// querySelectorAll()
+
+	
+	</script>
+	
+
+
+
+
+<!-- {% for tag in tags %}
+	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+	<ul>
+	 {% for post in site.posts %}
+		 {% if post.tags contains tag %}
+		 <li>
+		 <h3>
+		 <a href="{{ post.url }}">
+		 {{ post.title }}
+		 <small>{{ post.date | date_to_string }}</small>
+		 </a>
+		 {% for tag in post.tags %}
+       <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+		 {% endfor %}
+		 </h3>
+		 </li>
+		 {% endif %}
+	 {% endfor %}
+	</ul>
+{% endfor %}
+ -->
+
+
+
+
+<!-- {% comment %}
+=======================
+The purpose of this snippet is to list all your posts posted with a certain tag.
+=======================
+{% endcomment %}
+{% for tag in tags %}
+	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+	<ul>
+	 {% for post in site.posts %}
+		 {% if post.tags contains tag %}
+		 <li>
+		 <h3>
+		 <a href="{{ post.url }}">
+		 {{ post.title }}
+		 <small>{{ post.date | date_to_string }}</small>
+		 </a>
+		 {% for tag in post.tags %}
+			 <a class="tag" href="/blog/tag/#{{ tag | slugify }}">{{ tag }}</a>
+		 {% endfor %}
+		 </h3>
+		 </li>
+		 {% endif %}
+	 {% endfor %}
+	</ul>
+{% endfor %} -->
+
