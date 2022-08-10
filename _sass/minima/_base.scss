@@ -121,9 +121,9 @@ a {
   .social-media-list &:hover {
     text-decoration: none;
 
-    .username {
-      text-decoration: underline;
-    }
+    // .username {
+    //   text-decoration: underline;
+    // }
   }
 }
 
@@ -154,7 +154,8 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  // background-color: #eef;
+  // background-color: #eef;
 }
 
 code {

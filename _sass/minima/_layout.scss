@@ -8,11 +8,12 @@
 
  .post-tag {
   color: $brand-color;
-  background-color: $brand-color;
+  // background-color: $brand-color;
   display: inline-block;
   background: $secondary-color;
   padding: 0 .5rem;
-  margin-right: .5rem;
+  margin-right: .3rem;
+  margin-bottom: .1rem;
   border-radius: 4px;
   &:hover {
     text-decoration: none;
@@ -46,11 +47,11 @@
   margin-bottom: 0;
   float: left;
 
-  &,
-  &:visited {
-    // color: $grey-color-dark;
-    color: $brand-color;
-  }
+  // &,
+  // &:visited {
+  //   // color: $grey-color-dark;
+  //   color: pink;
+  // }
 }
 
 .site-nav {
@@ -67,6 +68,7 @@
 
   .page-link {
     color: $brand-color;
+    // color: pink;
     // color: $text-color;
     line-height: $base-line-height;
 
@@ -104,7 +106,8 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        // fill: $grey-color-dark;
+        fill: $brand-color;
       }
     }
 
@@ -234,7 +237,7 @@
 .post-meta {
   font-size: $small-font-size;
   // color: lighten($brand-color, 30%);
-  color: darken($secondary-color, 10%);
+  color: darken($secondary-color, 30%);
   // color: $grey-color;
 }
 

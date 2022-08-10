@@ -17,7 +17,7 @@ The following part extracts all the tags from your posts and sort tags, so that 
 
 {%- comment -%}
 =======================
-The following part removes dulpicated tags and invalid tags like blank tag.
+The following part removes duplicated tags and invalid tags like blank tag.
 =======================
 {%- endcomment -%}
 {%- assign tags = "" -%}
@@ -88,12 +88,12 @@ Same as above but for categories
 
     <ul class="post-list">
       {%- for post in site.posts -%}
-      {% assign joinedtags = post.tags | join:" #" %}
-      {% assign joinedcats = post.categories | join:" " %}
-      <li class="post-elements {{joinedtags}} {{joinedcats}}">
+      <!-- {% assign joinedtags = post.tags | join:" #" %} -->
+      <!-- {% assign joinedcats = post.categories | join:" " %} -->
+      <li class="post-elements {{joinedtags}}">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <span class="post-meta">| {{joinedtags | prepend: "#"}}</span>
+        <span class="post-meta"> {{post.tags | sort | join:" #" | prepend: "| #"}}</span>
         <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}

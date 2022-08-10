@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+
+
+<!-- {% for tag in page.tags %}    
+<a id={{tag}} class="post-meta" href="#{{ tag | slugify }}" onclick="click_the_tag(this.id)"> #{{ tag }} </a>
+{% endfor %} -->
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -11,9 +17,13 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+        | <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }} </span></span>
+      {%- endif -%}
+      <span class="post-meta">{{page.tags | sort | join:" #" | prepend:"| #"}}</span>
+    </p>
   </header>
+
+
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
@@ -25,3 +35,4 @@ layout: default
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
+
