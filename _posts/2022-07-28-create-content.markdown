@@ -83,14 +83,17 @@ You can add a Link by adding this line:
 
 # Codeblocks
 
-You can add a codeblock by adding a line of ``` before and after your code
+You can add a codeblock with the highlight command
 
 ```
-    ```
-    code
-    ```
-```
+{% raw %}
 
+{% highlight liquid%}
+
+{% endhighlight%}
+
+{% endraw %}
+```
 
 # Markdown Resources
 
